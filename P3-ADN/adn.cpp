@@ -24,7 +24,7 @@ ADN::ADN(ADN &&B) noexcept : n{B.n} , b{B.b}
 
 ADN::~ADN()
 {
-    delete b;
+    delete [] b;
 }
 
 
