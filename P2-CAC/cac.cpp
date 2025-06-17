@@ -1,6 +1,3 @@
-//
-// Created by Óscar Ortega Ríos on 17/6/25.
-//
 
 #include "cac.hpp"
 
@@ -24,4 +21,5 @@ Llamada::Llamada(size_t id, std::string fch, std::string h_ini, std::string h_fi
 {
     operador_->Recibir(*this);
 }
+
 
