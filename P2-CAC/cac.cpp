@@ -22,4 +22,16 @@ Llamada::Llamada(size_t id, std::string fch, std::string h_ini, std::string h_fi
     operador_->Recibir(*this);
 }
 
+void Llamada::Asignar(Operador &op)
+{
+    operador_->Desasignar(*this);
+    operador_ = &op;
+    operador_->Recibir(*this);
+}
+
+const Operador *Llamada::Asistente() const
+{
+    return operador_;
+}
+
 
