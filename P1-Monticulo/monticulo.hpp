@@ -11,7 +11,7 @@
 // b. std::insert(): Recibe dos iteradores, principio y final, y un
 // elemento “x”, flotando el elemento hasta que el árbol quede  ;; Asi no funciona insert
 // reorganizado.
-// c. std::erase(): Recibe un elemento “x”, hundiendo el elemento
+// c. std::erase(): Recibe un elemento “x”, hundiendo el elemento   ;; asi no funciona erase
 // hasta que el árbol quede reorganizado.
 // Entonces, realiza, definiendo externamente a la clase, los métodos
 // siguientes:

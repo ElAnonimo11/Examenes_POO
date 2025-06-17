@@ -17,5 +17,9 @@ void Monticulo::insertar(double e)
 
 void Monticulo::eliminar(double e)
 {
-
+    // Comprueba que existe el elemento, lo borra si existe
+    if (const auto it = std::find(m.begin(),m.end(),e); it != m.end()) {
+        m.erase(it);
+        std::make_heap(m.begin(),m.end());
+    }
 }
