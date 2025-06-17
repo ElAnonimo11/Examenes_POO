@@ -27,8 +27,11 @@ public:
     enum Base{G,A,C,T};
     ADN();
     explicit ADN(const Base& B);
+    // Los por defecto no valen debido a la memoria dinámica,simplemente copiaria el puntero el por defecto
     ADN(const ADN& B);
+    ADN& operator=(const ADN& B);
     ADN(ADN&& B) noexcept;
+    ADN& operator=(ADN&& B);
     ~ADN();
 
 private:

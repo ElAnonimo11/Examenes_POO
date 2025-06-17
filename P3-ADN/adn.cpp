@@ -16,10 +16,26 @@ ADN::ADN(const ADN &B) : n{B.n} , b{new Base[n]}
     std::copy_n(B.b,n,b);
 }
 
+ADN &ADN::operator=(const ADN &B)
+{
+    ADN aux{B};
+    std::swap(n,aux.n);
+    std::swap(b,aux.b);
+    return *this;
+}
+
 ADN::ADN(ADN &&B) noexcept : n{B.n} , b{B.b}
 {
     B.n = 0;
     B.b = nullptr;
+}
+
+ADN &ADN::operator=(ADN &&B)
+{
+    ADN aux{std::move(B)};
+    std::swap(n,aux.n);
+    std::swap(b,aux.b);
+    return *this;
 }
 
 ADN::~ADN()
