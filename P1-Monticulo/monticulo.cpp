@@ -23,3 +23,14 @@ void Monticulo::eliminar(double e)
         std::make_heap(m.begin(),m.end());
     }
 }
+
+const std::vector<double> &Monticulo::referencia_vector() const
+{
+    return m;
+}
+
+std::ostream &operator<<(std::ostream &os, const Monticulo &M)
+{
+    for (const double elem : M.referencia_vector()) os << elem << ' ';
+    return os;
+}
