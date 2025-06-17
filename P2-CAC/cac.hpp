@@ -18,15 +18,15 @@
 // • Llamadas(): Llamadas atendidas por un operador.
 // • Asistente(): Operador que atendió una llamada
 
+#include <set>
 #include <string>
-#include <unordered_set>
 
 class Llamada;
 
 class Operador
 {
 public:
-    using Llamadas_operador = std::unordered_set<Llamada*>;
+    using Llamadas_operador = std::set<Llamada*>;
     Operador() = default;
     void Recibir(Llamada &l);
     void Desasignar(Llamada &l);      // Para cuando se asigna la llamada a otro operador
@@ -41,6 +41,7 @@ public:
     Llamada(size_t id,std::string fch,std::string h_ini,std::string h_fin,Operador& op);
     const Operador* Asistente() const;
     void Asignar(Operador& op);
+    ~Llamada();
 private:
     size_t ID;
     std::string fecha,

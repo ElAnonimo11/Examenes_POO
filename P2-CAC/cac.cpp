@@ -34,4 +34,11 @@ const Operador *Llamada::Asistente() const
     return operador_;
 }
 
+Llamada::~Llamada()
+{
+    operador_->Desasignar(*this);
+    delete operador_;
+}
+
+
 
