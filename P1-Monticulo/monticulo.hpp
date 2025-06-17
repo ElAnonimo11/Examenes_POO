@@ -33,8 +33,12 @@
 class Monticulo
 {
 public:
-    Monticulo() = default;
-
+    Monticulo()                                     = default;
+    Monticulo(const Monticulo &B)                   = default;
+    Monticulo(Monticulo &&B) noexcept               = default;
+    Monticulo & operator=(const Monticulo &B)       = default;
+    Monticulo & operator=(Monticulo &&B) noexcept   = default;
+    ~Monticulo()                                    = default;
     explicit Monticulo(const std::vector<double>& v);
     void insertar(double e);
     void eliminar(double e);
