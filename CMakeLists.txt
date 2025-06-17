@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Examenes_POO main.cpp
         P1-Monticulo/monticulo.cpp
-        P1-Monticulo/monticulo.hpp)
+        P1-Monticulo/monticulo.hpp
+        P2-CAC/cac.cpp
+        P2-CAC/cac.hpp)
