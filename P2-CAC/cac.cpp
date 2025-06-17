@@ -16,7 +16,7 @@ const Operador::Llamadas_operador &Operador::LLamadas() const
     return llamadas;
 }
 
-Llamada::Llamada(size_t id, std::string fch, std::string h_ini, std::string h_fin, Operador& op)
+Llamada::Llamada(const size_t id, std::string fch, std::string h_ini, std::string h_fin, Operador& op)
     : ID{id} , fecha{std::move(fch)} , hora_ini{std::move(h_ini)} , hora_fin{std::move(h_fin)} , operador_{&op}
 {
     operador_->Recibir(*this);

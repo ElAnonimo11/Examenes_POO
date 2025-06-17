@@ -31,6 +31,7 @@ public:
     void Recibir(Llamada &l);
     void Desasignar(Llamada &l);      // Para cuando se asigna la llamada a otro operador
     const Llamadas_operador& LLamadas() const;
+
 private:
     Llamadas_operador llamadas;
 };
