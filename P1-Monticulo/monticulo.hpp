@@ -28,7 +28,6 @@
 // a64b0469ff35958ef4ab887a898bd50bdfbbe91a-11691214
 
 #include <vector>
-#include <iostream>
 
 class Monticulo
 {

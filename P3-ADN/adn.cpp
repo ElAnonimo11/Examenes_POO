@@ -30,7 +30,7 @@ ADN::ADN(ADN &&B) noexcept : n{B.n} , b{B.b}
     B.b = nullptr;
 }
 
-ADN &ADN::operator=(ADN &&B)
+ADN &ADN::operator=(ADN &&B) noexcept
 {
     ADN aux{std::move(B)};
     std::swap(n,aux.n);
